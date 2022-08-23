@@ -5,18 +5,20 @@ import Toggle from './Toggle';
 import "./style.css"
 import { useContext } from 'react';
 import { LayoutContext } from '../Context/LayoutContext';
+import { Card } from 'primereact/card';
 
- const  Card = () => {
+ const  Cards = () => {
     const {nightmode, day, night} = useContext(LayoutContext)
     const mood = nightmode ? night : day
 
     return (  
-        <div className='bg' style={{backgroundColor: mood.background}}>
+
+            <Card className='card' style={{backgroundColor: mood.background}}>
             <CardName />
             <CardImage />
             <Toggle/>
-        </div>
+            </Card>
     );
  }
   
- export default Card ; 
+ export default Cards ; 

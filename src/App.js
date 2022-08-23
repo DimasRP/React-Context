@@ -1,9 +1,14 @@
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import './App.css';
-import Card from './Component/Card';
+import Cards from './Component/Cards';
 import MainContextProv from "./Context/MainContext"
 import LayoutContextProv from './Context/LayoutContext';
+
+import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
+import "primereact/resources/primereact.min.css";                  //core css
+import "primeicons/primeicons.css";                                //icons
+ 
 
 function App() {
 
@@ -18,7 +23,7 @@ function App() {
     <div className="App">
       <LayoutContextProv>
       <MainContextProv>
-      <Card/>
+      <Cards/>
       </MainContextProv>
       </LayoutContextProv>
     </div>

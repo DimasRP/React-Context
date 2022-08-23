@@ -1,25 +1,26 @@
-import React, { Component, createContext } from "react";
+import { createContext, useState } from "react";
+
+// export const MainContext = createContext({
+//   empty: true
+// })
 export const MainContext = createContext();
 
-class MainContextProv extends Component {
-  state = {
-    cardData: {
-      name: "Dimas",
-      avatar:
-        "https://reqres.in/img/faces/8-image.jpg",
-    },
+const MainContextProv = (props) => {
+  const [cardData,setCardData] = useState({
+    name: "Dimas",
+    avatar:
+    "https://reqres.in/img/faces/8-image.jpg"
+  });
+
+  const mainContextValue = {
+    cardData,
   };
 
-  render() {
-    const mainContextValue = {
-      cardData: this.state.cardData,
-    };
-    return (
-      <MainContext.Provider value={mainContextValue}>
-        {this.props.children}
-      </MainContext.Provider>
-    );
-  }
-}
+  return (
+    <MainContext.Provider value={mainContextValue}>
+      {props.children}
+    </MainContext.Provider>
+  );
+};
 
 export default MainContextProv;
