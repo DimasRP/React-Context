@@ -2,24 +2,24 @@
 import { useState } from 'react';
 import './App.css';
 import Card from './Component/Card';
-import {mainContext} from "./Context/MainContext"
+import MainContextProv from "./Context/MainContext"
 import LayoutContextProv from './Context/LayoutContext';
 
 function App() {
 
-  const [data,setData] = useState ({
-    name: 'Dimas',
-    avatar: 'https://reqres.in/img/faces/8-image.jpg'
-  })
+  // const [data,setData] = useState ({
+  //   name: 'Dimas',
+  //   avatar: 'https://reqres.in/img/faces/8-image.jpg'
+  // })
 
-  const mainContextValue = {data}
+  // const mainContextValue = {data}
 
   return (
     <div className="App">
       <LayoutContextProv>
-      <mainContext.Provider value={mainContextValue}>
+      <MainContextProv>
       <Card/>
-      </mainContext.Provider>
+      </MainContextProv>
       </LayoutContextProv>
     </div>
   );
