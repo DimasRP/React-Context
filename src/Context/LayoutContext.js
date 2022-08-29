@@ -7,7 +7,7 @@ class LayoutContextProv extends Component {
         nightmode : false,
         day: {
             color: '#000',
-            background: 'red'
+            background: 'gray'
         },
         night:{
             color: 'white',

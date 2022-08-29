@@ -12,7 +12,7 @@ import { Card } from 'primereact/card';
     const mood = nightmode ? night : day
 
     return (  
-
+                
             <Card className='card' style={{backgroundColor: mood.background}}>
             <CardName />
             <CardImage />
